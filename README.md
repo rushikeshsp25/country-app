@@ -1,4 +1,4 @@
-# PROJECT BLAH BLAH
+# Country App
 
 ## Requirements
 
