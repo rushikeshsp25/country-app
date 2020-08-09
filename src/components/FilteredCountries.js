@@ -3,6 +3,7 @@ import Row from './common/Grid/Row';
 import Col from './common/Grid/Col';
 import CountryCard from './CountryCard';
 import './FilteredCountries.css';
+import Loader from './common/Loader';
 
 function FilteredCountries(props) {
     return (
@@ -18,7 +19,11 @@ function FilteredCountries(props) {
                             ))
                         }
                     </Row>
-                    : <p style={{textAlign:"center"}} className="info-text">No Countries Are Found!</p>
+                    : 
+                    <>
+                    <Loader></Loader>
+                    <p style={{textAlign:"center", margin:"50px"}} className="info-text">No Countries Are Found!</p>
+                    </>
             }
         </div>
     );
