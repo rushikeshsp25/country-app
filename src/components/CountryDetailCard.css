@@ -1,0 +1,43 @@
+.country-detail-card {
+    margin: 20px 10vw;
+    padding: 20px
+}
+
+.country-detail-card.light {
+    background-color: var(--light-foreground);
+    color: var(--light-text);
+    box-shadow: 0px 1px 10px var(--light-box-shadow);
+}
+
+.country-detail-card.dark {
+    background-color: var(--dark-foreground);
+    color: var(--dark-text);
+    box-shadow: 0px 1px 10px var(--dark-box-shadow);
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+.country-detail-card.light tr:nth-child(odd) {
+    background-color: rgb(223, 223, 223);
+}
+
+.country-detail-card.dark tr:nth-child(even) {
+    background-color: #3e5264;
+}
+
+.country-info-table-conatainer {
+    overflow-x: auto;
+    margin-top: 20px;
+}
+
+a {
+    color: blue;
+}

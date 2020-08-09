@@ -1,0 +1,48 @@
+.pagination-container {
+    text-align: right;
+    padding: 10px;
+}
+
+.pagination {
+    display: inline-block;
+}
+
+.disabled {
+    color: currentColor;
+    cursor: not-allowed;
+    opacity: 0.5;
+    text-decoration: none;
+}
+
+.pagination a {
+    float: left;
+    padding: 2px 8px;
+    font-size: 12px;
+    text-decoration: none;
+    transition: background-color 1s;
+}
+
+.pagination-container.light .pagination a {
+    color: var(--light-text);
+    border: 1px solid var(--light-text-info);
+}
+
+.pagination-container.dark .pagination a {
+    color: var(--dark-text);
+    border: 1px solid var(--dark-text-info);
+}
+
+.pagination-container.light .pagination a.active {
+    background-color: var(--light-text);
+    color: var(--dark-text);
+}
+
+.pagination-container.dark .pagination a.active {
+    background-color: var(--dark-text);
+    color: var(--light-text);
+}
+
+.pagination-container .pagination a:hover:not(.active) {
+    background-color: var(--light-box-shadow);
+    color: var(--light-text);
+}

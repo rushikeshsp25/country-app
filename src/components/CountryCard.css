@@ -1,0 +1,100 @@
+.card {
+    cursor: pointer;
+}
+
+.flag-img {
+    height: 100px;
+    width: auto;
+    max-width: 100%;
+}
+
+.card.light {
+    background-color: var(--light-foreground);
+    color: var(--light-text);
+    box-shadow: 0px 1px 10px var(--light-box-shadow);
+}
+
+.card.dark {
+    background-color: var(--dark-foreground);
+    color: var(--dark-text);
+    box-shadow: 0px 1px 10px var(--dark-box-shadow);
+}
+
+.card {
+    height: 12em;
+    width: 100%;
+    border-radius: 16px;
+    overflow: hidden;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    position: relative;
+    -webkit-transition: width 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+    -o-transition: width 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition: width 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+/* ^-- The margin bottom is necessary for the drop shadow otherwise it gets clipped in certain cases. */
+
+/* Top Half of card, image. */
+
+.card-image {
+    height: 8em;
+    width: 100%;
+    padding: 1em 2em;
+    position: Absolute;
+    top: 0px;
+    -webkit-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+    -o-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: grayscale(40%);
+}
+
+/* Bottom Card Section */
+
+.card-description {
+    height: 4em;
+    width: 100%;
+    position: absolute;
+    bottom: 0em;
+    -webkit-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+    -o-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+    padding: 0.5em 1em;
+}
+.card-description .capital,.population{
+    display: inline-block;
+    width: 50%;
+}
+.card-description .population{
+    padding-left: 5px;
+}
+.card-description .no-text-overflow{
+    white-space: nowrap;
+    overflow: hidden;
+     text-overflow: ellipsis
+}
+.card.light .card-description{
+    background-color: var(--light-foreground);
+}
+.card.dark .card-description{
+    background-color: var(--dark-foreground);
+}
+
+/* Property Cards Hover States */
+
+.card:hover .card-description {
+    height: 0em;
+    padding: 0px 1em;
+}
+
+.card:hover .card-image {
+    height: 12em;
+    filter: none;
+}

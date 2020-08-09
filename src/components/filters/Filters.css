@@ -1,0 +1,171 @@
+.filter-menu {
+    padding-top: 20px;
+}
+
+/* Search Box styles */
+
+.search-container {
+    position: relative;
+}
+
+.search {
+    overflow: auto;
+}
+
+.filter-menu.light .search {
+    color: var(--light-text);
+    background-color: var(--light-foreground);
+    border: 2px solid var(--light-text);
+}
+
+.filter-menu.dark .search {
+    color: var(--dark-text);
+    background-color: var(--dark-foreground);
+    border: 2px solid var(--dark-text);
+}
+
+.search input[type="text"] {
+    border: 0px;
+    width: 67%;
+    margin: 2px 0;
+    padding: 8px 10px;
+}
+
+.search input[type="text"]:focus {
+    outline: 0;
+}
+
+.filter-menu.light .search input[type="text"]:focus {
+    color: var(--light-text-info);
+}
+
+.filter-menu.dark .search input[type="text"]:focus {
+    color: var(--dark-text-info);
+}
+
+.search input[type="submit"] {
+    border: 0px;
+    background: none;
+    float: right;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.filter-menu.light .search input {
+    background-color: var(--light-foreground);
+}
+
+.filter-menu.light .search input[type="submit"] {
+    background-color: var(--light-primary);
+    color: var(--dark-text);
+}
+
+.filter-menu.dark .search input {
+    background-color: var(--dark-foreground);
+    color: var(--dark-text);
+}
+
+.search-suggestions {
+    position: absolute;
+    z-index: 1000;
+    /*position the autocomplete items to be the same width as the container:*/
+    top: 100%;
+    left: 0;
+    right: 0;
+}
+
+.filter-menu.light .search-suggestions {
+    border: 1px solid var(--light-box-shadow);
+    background-color: var(--light-foreground);
+    border-bottom: none;
+    border-top: none;
+}
+
+.filter-menu.dark .search-suggestions {
+    border: 1px solid var(--dark-box-shadow);
+    background-color: var(--dark-foreground);
+    border-bottom: none;
+    border-top: none;
+}
+
+.search-suggestions ul {
+    list-style-type: none;
+}
+
+.search-suggestions ul li {
+    border-bottom: 1px solid #d4d4d4;
+    padding: 5px;
+    font-size: 14px;
+}
+
+.search-suggestions ul li:hover {
+    cursor: pointer;
+}
+
+.filter-menu.light .search-suggestions ul li:hover {
+    background-color: var(--light-box-shadow);
+}
+
+.filter-menu.dark .search-suggestions ul li:hover {
+    background-color: var(--dark-box-shadow);
+}
+
+/* Dropdown Filter styles */
+
+.region-select {
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+.region-select select {
+    overflow: auto;
+    outline: none;
+    background: transparent;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0;
+    display: block;
+    width: 100%;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.filter-menu.light .region-select select {
+    background-color: var(--light-foreground);
+    border: 2px solid var(--light-text);
+    color: var(--light-text-info);
+}
+
+.filter-menu.dark .region-select select {
+    background-color: var(--dark-foreground);
+    border: 2px solid var(--dark-text);
+    color: var(--dark-text-info);
+}
+
+.filter-menu .region-select:after {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50px;
+    height: 100%;
+    line-height: 50px;
+    content: '\25BC';
+    text-align: center;
+    z-index: 0;
+    font-size: 12px;
+    box-sizing: border-box;
+}
+
+.filter-menu.light .region-select:after {
+    background: var(--light-primary);
+    color: var(--dark-text);
+    border: 2px solid var(--light-text);
+}
+
+.filter-menu.dark .region-select:after {
+    background: var(--dark-primary);
+    color: var(--dark-text);
+    border: 2px solid var(--dark-text);
+}
